@@ -3,10 +3,14 @@ This is the official repo for HyDE (Hypocotyl Determining Engine), a hardware an
 
 2011 documentation:
 
+- [*Automated analysis of hypocotyl growth dynamics during shade avoidance in Arabidopsis*](https://doi.org/10.1111/j.1365-313X.2010.04476.x)
 - [*Rapid and dynamic growth of Arabidopsis seedlings in response to changes in light
 quality: A live imaging study*](https://escholarship.org/content/qt8j3081vb/qt8j3081vb_noSplash_5ff25572facd6a6b99431395aba48c39.pdf?t=n701fs)
-- [*Automated analysis of hypocotyl growth dynamics during shade avoidance in Arabidopsis*](https://doi.org/10.1111/j.1365-313X.2010.04476.x)
 - `doc/hyde_userguide.pdf` in this repo. Excerpted from the Appendix of Benjamin's above thesis.
+
+<img src="./doc/figure_s1_from_the_paper.png" height="350">
+
+*Figure S1. Image acquisition apparatus and image analysis software. (a) Two CCD cameras were set up to image plates, half‐covered in growth media, under LED light conditions. (b) Whole images were cropped such that a single seedlings is visible, where the hypocotyl is the only structure present at the bottom. (c) The raw image is converted into binary format, and then the EDT is calculated (d). (e) A graph is constructed based on the value of the EDT at every hypocotyl midpoint along the vertical axis [rotated (d) 90° to the right], and a local maximum is selected indicating the centroid of the shoot apical meristem (red dot). (f) A line is drawn on the hypocotyl for every image in the stack for verification. (g) GUI for HYDE, illustrating the various features and parameters of the software.*
 
 
 # Releases
