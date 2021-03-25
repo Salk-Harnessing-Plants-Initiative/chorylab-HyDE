@@ -1,5 +1,5 @@
 # chorylab-HyDE
-This is the official repo for HyDE (Hypocotyl Determining Engine), a matlab-based program that measures hypocotyl growth in time-series images. Developed by Benjamin J. Cole, 2011. Documentation organized here by Russell Tran, 2021.  
+This is the official repo for HyDE (Hypocotyl Determining Engine), a hardware and software pipeline that measures hypocotyl growth in time-series images. Developed by Benjamin J. Cole, 2011. Documentation organized here by Russell Tran, 2021.  
 
 Includes some ImageJ plugin scripts to preprocess images for input into HyDE, such as appropriate cropping.
 
