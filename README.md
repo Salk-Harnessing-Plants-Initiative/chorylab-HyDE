@@ -7,23 +7,25 @@ Includes some ImageJ plugin scripts to preprocess images for input into HyDE, su
 
 - [*Rapid and dynamic growth of Arabidopsis seedlings in response to changes in light
 quality: A live imaging study*](https://escholarship.org/content/qt8j3081vb/qt8j3081vb_noSplash_5ff25572facd6a6b99431395aba48c39.pdf?t=n701fs)
-
 - [*Automated analysis of hypocotyl growth dynamics during shade avoidance in Arabidopsis*](https://doi.org/10.1111/j.1365-313X.2010.04476.x)
-
 - `doc/hyde_userguide.pdf` in this repo. Excerpted from the Appendix of Benjamin's above thesis.
 
 # Releases
 
-- **2011 Release**, or all available files from 2011
-	- `2011_HyDEv1_0_win32.zip`: contains distrib of HyDE v1.0, which is the most stable version of HyDE and the published version used in the paper
-	- `2011_Col-0_ctrl.zip`: Example image data set ready for input into HyDE. Arabidopsis Col-0 grown as control.
-	- `2011_Col-0_shade.zip`: Example image data set ready for input into HyDe. Arabidopsis Col-0 grown in shade.
-	- `2011_jekell_files.zip`: Contains
-		-`jekell_preprocess.java`: source for FIJI Plugin to preprocess camera images before input to HyDE
-		-`Interop.Galil.0.5.dll`: useful for interfacing with the carousel
-		-`jekell_3.exe`: a binary used to run the carousel (the source no longer exists). Both `jekell_3.exe` and the carousel are a prototype.
-		-`jekell_preprocess.class`: a binary used in for preprocessing
-	- `2011_HyDE_versions.zip`: contains source of HyDE v1.0, a binary for the work-in-progress HyDE v2.0, and the source for the work-in-progress HyDE v4.0. There is no HyDE v3.0. Presumably HyDE v2.0 and 4.0 have some work to incorporate leaf angle, and different methods to compute Shoot Apical Meristem (SAM), per Benjamin's memory. Consider this zip bundle only for exploratory purposes.
+* **2011 Release**, or all available files from 2011
+	* `2011_HyDEv1_0_win32.zip`: contains distrib of HyDE v1.0, which is the most stable version of HyDE and the published version used in the paper
+	* `2011_Col-0_ctrl.zip`: Example image data set ready for input into HyDE. Arabidopsis Col-0 grown as control.
+	* `2011_Col-0_shade.zip`: Example image data set ready for input into HyDe. Arabidopsis Col-0 grown in shade.
+	* `2011_jekell_files.zip`: Contains
+		* `jekell_preprocess.java`: source for FIJI Plugin to preprocess camera images before input to HyDE
+		* `Interop.Galil.0.5.dll`: useful for interfacing with the carousel
+		* `jekell_3.exe`: a binary used to run the carousel (the source no longer exists). Both `jekell_3.exe` and the carousel are a prototype.
+		* `jekell_preprocess.class`: a binary used in for preprocessing
+	* `2011_HyDE_versions.zip`: Contains 
+		* Source of HyDE v1.0 
+		* A binary for the work-in-progress HyDE v2.0 
+		* The source for the work-in-progress HyDE v4.0. 
+		* There is no HyDE v3.0. Presumably HyDE v2.0 and 4.0 have some work to incorporate leaf angle, and different methods to compute Shoot Apical Meristem (SAM), per Benjamin's memory. Consider this zip bundle only for exploratory purposes.
 
 # Development
 The source included in this repo is based on the 2011 published HyDE v1.0, and the preprocessing FIJI plugin (referred to as Jekell). For exploration of other old work, look at the 2011 Release.
