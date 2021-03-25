@@ -26,7 +26,7 @@ quality: A live imaging study*](https://escholarship.org/content/qt8j3081vb/qt8j
 		* Source of HyDE v1.0 
 		* A binary for the work-in-progress HyDE v2.0 
 		* The source for the work-in-progress HyDE v4.0. 
-		* There is no HyDE v3.0. Presumably HyDE v2.0 and 4.0 have some work to incorporate leaf angle, and different methods to compute Shoot Apical Meristem (SAM), per Benjamin's memory. Consider this zip bundle only for exploratory purposes.
+		* There is no HyDE v3.0. HyDE v2.0 and 4.0 amorphously have some work to incorporate leaf angle and different methods to compute Shoot Apical Meristem (SAM), per Benjamin's memory. Consider this zip bundle only for exploratory purposes.
 
 # Development
 The source included in this repo is based on the 2011 published HyDE v1.0, and the preprocessing FIJI plugin (referred to as Jekell). For exploration of other old work, look at the 2011 Release.
