@@ -8,6 +8,7 @@ quality: A live imaging study*](https://escholarship.org/content/qt8j3081vb/qt8j
 - [*Automated analysis of hypocotyl growth dynamics during shade avoidance in Arabidopsis*](https://doi.org/10.1111/j.1365-313X.2010.04476.x)
 - `doc/hyde_userguide.pdf` in this repo. Excerpted from the Appendix of Benjamin's above thesis.
 
+
 # Releases
 
 * **2011 Release**, or all available files from 2011
@@ -26,8 +27,12 @@ quality: A live imaging study*](https://escholarship.org/content/qt8j3081vb/qt8j
 		* The source for the work-in-progress HyDE v4.0. 
 		* There is no HyDE v3.0. HyDE v2.0 and 4.0 amorphously have some work to incorporate leaf angle and different methods to compute Shoot Apical Meristem (SAM), per Benjamin's memory. Consider this zip bundle only for exploratory purposes.
 
+
 # Development
 The source included in this repo is based on the 2011 published HyDE v1.0, and the preprocessing FIJI plugin (referred to as Jekell). For exploration of other old work, look at the 2011 Release.
+
+We only had the 2011 source for v1.0 and v4.0. If you want to see what Benjamin changed, you can view the diff of [commit 458e699](https://github.com/Salk-Harnessing-Plants-Initiative/chorylab-HyDE/commit/458e699259ccee7ba7d7a892298637f221d05c95) from the archival branch `2011-hyde-v4`. 
+
 
 # Russell's guide
 The pipeline is as follows:
