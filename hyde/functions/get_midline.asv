@@ -1,0 +1,48 @@
+function [hypocotyl_midpoints, tp] = get_midline(seedling_image, prevtp)
+  %returns midline coordinate vector along the height of the image.
+  %-1 is returned for each y value that does not correspond to a midline
+  %point.
+  height=size(seedling_image,1);
+  previousmidpoint = 0;
+  hypocotyl_midpoints = NaN(height,1);
+  hypocotyl_distances = NaN(height,1);
+  for i=1:height
+    [distances,midpoints] = getpeaks(seedling_image(i,:));
+    if(i==1)
+      previousmidpoint = midpoints(1);
+      hypocotyl_midpoints = midpoints(1);
+      hypocotyl_distances = distances(1);
+    else
+      mindistance = 1;
+      testmidpoint = 0;
+      for j=1:length(midpoints)
+        horiz_distance = abs(midpoints(j) - previousmidpoint);
+        if(horiz_distance <= mindistance)
+          testmidpoint = midpoints(j);
+          distance = distances(j);
+          mindistance = horiz_distance;
+        end
+      end
+      if(~testmidpoint)
+        break;
+      else
+        hypocotyl_midpoints(i) = testmidpoint;
+        hypocotyl_distances(i) = distance;
+        previousmidpoint = testmidpoint;
+      end
+    end
+  end
+  smooth_dist = smooth(hypocotyl_distances,7);
+  int = get_midline_interval(smooth_dist);
+  if(~isnan(int))
+%    termination_point = get_tp(hypocotyl_distances,int,prevtp);
+    termination_point = get_tp(smooth_dist,int,prevtp);
+    if(isnan(termination_point)) tp=NaN; hypocotyl_midpoints = NaN; return; end;
+    plot(int(1):int(2),smooth_dist,
+    hypocotyl_midpoints = hypocotyl_midpoints(int(1):termination_point);
+    tp = termination_point;
+  else
+    hypocotyl_midpoints = NaN;
+    tp = NaN;
+  end;
+end
