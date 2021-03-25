@@ -18,7 +18,7 @@ function [raw,len,growth_rate] = HyDE(input_directory, save_directory, assay, ta
 raw = NaN;
 len = NaN;
 growth_rate = NaN;
-
+myEx = 0;
 starttime = assay(1) - assay(2);
 endtime = assay(3) - assay(2);
 timestep = assay(4);
@@ -95,7 +95,14 @@ if(analysis_type == 2)
       
       %process movie, store as a movie object file.  If the algorithm is
       %unable to compute a movie, skip this directory and move on.
-      movobj = process_movie('*.tif', framestep, timevector, dataname, assay(6));
+      try
+        movobj = process_movie('*.tif', framestep, timevector, dataname, assay(6));
+      catch myEx
+          disp(myEx.message);
+      end
+      if(myEx)
+          movobj = NaN;
+      end
       if(isnan(movobj) || ~movobj)
         cd ../;
         continue;
@@ -185,6 +192,7 @@ if(analysis_type == 3)
       cd(plate_directory);
       %loop through seedling directories within each plate directory
       for d2=3:length(seedling_directories)
+        myEx = 0;
         seedling_directory = seedling_directories(d2).name;
         seedling_name = seedling_directory;
         cd(seedling_directory);
@@ -192,7 +200,15 @@ if(analysis_type == 3)
         
         %process movie, store as a movie object file.  If the algorithm is
         %unable to compute a movie, skip this directory and move on.
-        movobj = process_movie('*.tif', framestep, timevector, dataname,assay(6));
+        try
+            movobj = process_movie('*.tif', framestep, timevector, dataname,assay(6));
+        catch myEx
+            display(myEx.message);
+            myEx = 1;
+        end
+        if(myEx)
+            movobj = NaN;
+        end
         if(isnan(movobj) || ~movobj)
           cd ../;
           continue;
@@ -239,9 +255,9 @@ if(analysis_type == 3)
       average(i,d0-1) = nanmean([raw{i+1,2:size(data,2)+1}]);
       stderr(i,d0-1) = nanstd([raw{i+1,2:size(data,2)+1}])/sqrt(size(data,2));
     end
-    rawdataname = [tag,'_',genotype_name,'_raw.csv'];
-    lendataname = [tag,'_',genotype_name,'_len.csv'];
-    grdataname = [tag,'_',genotype_name,'_gr.csv'];
+    rawdataname = [save_directory,'/',tag,'_',genotype_name,'_raw.csv'];
+    lendataname = [save_directory,'/',tag,'_',genotype_name,'_len.csv'];
+    grdataname = [save_directory,'/',tag,'_',genotype_name,'_gr.csv'];
     if(writeoptions(1)) cellwrite(rawdataname,raw); end
     if(writeoptions(2)) cellwrite(lendataname,len); end
     if(writeoptions(3)) cellwrite(grdataname,growth_rate); end

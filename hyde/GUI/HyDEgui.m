@@ -158,9 +158,9 @@ switch(handles.analysis_type)
   case 1
     try
         raw = HyDE(directory,save_directory,newassay,a7,1,[cb1,cb2,cb3,cb4]);
-    catch my.Ex
-        fileID = fopen('error.log');
-        fprintf(fileID,'%s',my.Ex);
+    catch myEx
+        disp(myEx.message);
+        raw = [];
     end
     if(length(raw) > 1)
       axes(handles.axes1);
@@ -181,9 +181,11 @@ switch(handles.analysis_type)
   case 2
     try
       raw = HyDE(directory,save_directory, newassay,a7,2,[cb1,cb2,cb3,cb4]);
-    catch my.Ex
-        fileID = fopen('error.log');
-        fprintf(fileID,'%s',my.Ex);
+    catch myEx
+        errordlg('AHHHH!')
+        set(handles.analyze,'String','Begin Analysis');
+        set(handles.analyze,'Enable','on');
+        return;
     end
     if(length(raw) > 1)
       axes(handles.axes1);
@@ -199,12 +201,7 @@ switch(handles.analysis_type)
       errordlg('No data was generated from images.  Please check that your directory structure is correct, and that images are of proper quality');
     end
   case 3
-    try
-        [raw,err,names] = HyDE(directory,save_directory, newassay,a7,3,[cb1,cb2,cb3,cb4]);
-    catch my.Ex
-        fileID = fopen('error.log');
-        fprintf(fileID,'%s',my.Ex);
-    end
+    [raw,err,names] = HyDE(directory,save_directory, newassay,a7,3,[cb1,cb2,cb3,cb4]);
     if(length(raw)>1)
       colors = 'cmbryg';
       for i=2:size(raw,2)

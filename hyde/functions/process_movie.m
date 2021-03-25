@@ -9,11 +9,13 @@ function [movobj] = process_movie(directory, step, timevector, id, pixelspermm)
   maxconsecnan = 0;
   tmpmaxconsecnan = 0;
   %cycle through each frame
-  if(num_expected_frames ~= num_frames)
+  if(num_expected_frames > num_frames)
     movobj = NaN;
     return;
+  else
+      num_frames = num_expected_frames;
   end
-  for i=1:step:length(D);
+  for i=1:step:num_frames*step-(step-1)
     %Store image data
     raw=imread(D(i).name);
     frameobj = frame(raw);
@@ -24,10 +26,10 @@ function [movobj] = process_movie(directory, step, timevector, id, pixelspermm)
     raw = raw_frames(i).raw_image;
     binary = raw_frames(i).EDT_image;
     %get midline data, if a reliable termination point can be determined
-    [midline, tp] = get_midline(binary, prevtp);
+    [midline, tp] = get_midline(raw, prevtp,'skeleton');
     if(prevtp == 0 && ~isnan(tp)) %if this is the first frame, initialize tp and prevtp
       prevtp = tp;
-    elseif(abs(prevtp-tp) <= 10) %if the previous tp is less than 5 pixles away from the current tp, assign
+    elseif(dist_idx(prevtp,tp,size(raw)) <= 1000) %if the previous tp is less than 5 pixles away from the current tp, assign
       prevtp = tp;
       if(tmpmaxconsecnan > maxconsecnan) maxconsecnan = tmpmaxconsecnan; end;
       tmpmaxconsecnan = 0;
@@ -38,17 +40,19 @@ function [movobj] = process_movie(directory, step, timevector, id, pixelspermm)
     
     %get the pixel interval, find the midline length, and draw a red line
     %on the image
-    midline_curve = polyfit(1:length(midline),midline(1:length(midline)), 4);
-    midline_length = get_length(midline_curve,[1,length(midline)],.1);
+    [midlinex,midliney] = ind2sub(size(raw),midline);
+    midline_curve = polyfit(midlinex,midliney, 6);
+    midline_length = get_length(midline_curve,[midlinex(1),midlinex(end)],.1);
     disp([i,midline_length]);
-    processed_image = draw_curve(raw, midline_curve,[1,length(midline)]);
+    processed_image = draw_curve(raw, midline_curve,[midlinex(1),midlinex(end)]);
     imshow(processed_image);
     drawnow();
     if(i==1)
         try
-            movie = zeros(size(raw,1),size(raw,2),3,length(1:step:length(D)));
+            movie = zeros(size(raw,1),size(raw,2),3,num_frames);
         catch myEx
             disp(myEx.message);
+            myEx = 1;
         end
         if(myEx)
             return;
