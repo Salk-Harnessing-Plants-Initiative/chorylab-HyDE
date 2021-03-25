@@ -46,6 +46,8 @@ Images acquired as "stacks" from camera -> preprocessing manually or using Image
 
 ## Software installation steps
 
+1. Camera control software: Install SmartView by Allied Vision
+
 ## Blog (For Chory Lab use)
 
 ### 25 March 2021
