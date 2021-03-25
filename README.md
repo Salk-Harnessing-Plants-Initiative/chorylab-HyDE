@@ -11,7 +11,7 @@ quality: A live imaging study*](https://escholarship.org/content/qt8j3081vb/qt8j
 
 # Releases
 
-* **2011 Release**, or all available files from 2011
+* **[2011 Release](https://github.com/Salk-Harnessing-Plants-Initiative/chorylab-HyDE/releases/tag/v1.0.0)**, or all available files from 2011
 	* `2011_HyDEv1_0_win32.zip`: Contains distrib of HyDE v1.0, which is the most stable version of HyDE and the published version used in the paper. Use this for installation.
 	* `2011_Col-0_ctrl.zip`: Example image data set ready for input into HyDE. Arabidopsis Col-0 grown as control. Contains .avi videos as well.
 	* `2011_Col-0_shade.zip`: Example image data set ready for input into HyDe. Arabidopsis Col-0 grown in shade.
@@ -29,7 +29,7 @@ quality: A live imaging study*](https://escholarship.org/content/qt8j3081vb/qt8j
 
 
 # Development
-The source included in this repo is based on the 2011 published HyDE v1.0, and the preprocessing FIJI plugin (referred to as Jekell). For exploration of other old work, look at the 2011 Release.
+The source included in this repo is based on the 2011 published HyDE v1.0, and the preprocessing FIJI plugin (referred to as Jekell). For exploration of other old work, look at the [2011 Release](https://github.com/Salk-Harnessing-Plants-Initiative/chorylab-HyDE/releases/tag/v1.0.0).
 
 We only had the 2011 source for v1.0 and v4.0. If you want to see what Benjamin changed, you can view the diff of [commit 458e699](https://github.com/Salk-Harnessing-Plants-Initiative/chorylab-HyDE/commit/458e699259ccee7ba7d7a892298637f221d05c95) from the archival branch `2011-hyde-v4`. 
 
