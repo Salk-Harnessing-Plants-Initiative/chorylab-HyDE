@@ -13,7 +13,7 @@ quality: A live imaging study*](https://escholarship.org/content/qt8j3081vb/qt8j
 # Releases
 
 * **2011 Release**, or all available files from 2011
-	* `2011_HyDEv1_0_win32.zip`: contains distrib of HyDE v1.0, which is the most stable version of HyDE and the published version used in the paper
+	* `2011_HyDEv1_0_win32.zip`: Contains distrib of HyDE v1.0, which is the most stable version of HyDE and the published version used in the paper. Use this for installation.
 	* `2011_Col-0_ctrl.zip`: Example image data set ready for input into HyDE. Arabidopsis Col-0 grown as control. Contains .avi videos as well.
 	* `2011_Col-0_shade.zip`: Example image data set ready for input into HyDe. Arabidopsis Col-0 grown in shade.
 	* `2011_Col-0_shade_avi.zip`: Companion to `2011_Col-0_shade.zip`; the .avi videos are kept here.
