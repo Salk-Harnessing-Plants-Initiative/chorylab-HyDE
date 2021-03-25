@@ -1,9 +1,7 @@
 # chorylab-HyDE
 This is the official repo for HyDE (Hypocotyl Determining Engine), a hardware and software pipeline that measures hypocotyl growth in time-series images. Developed by Benjamin J. Cole, 2011. Documentation organized here by Russell Tran, 2021.  
 
-Includes some ImageJ plugin scripts to preprocess images for input into HyDE, such as appropriate cropping.
-
-## 2011 documentation
+2011 documentation:
 
 - [*Rapid and dynamic growth of Arabidopsis seedlings in response to changes in light
 quality: A live imaging study*](https://escholarship.org/content/qt8j3081vb/qt8j3081vb_noSplash_5ff25572facd6a6b99431395aba48c39.pdf?t=n701fs)
