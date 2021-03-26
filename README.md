@@ -44,21 +44,40 @@ We only had the 2011 source for v1.0 and v4.0. If you want to see what Benjamin 
 # Russell's guide
 The pipeline is as follows:
 
-Images acquired as "stacks" from camera -> preprocessing manually or using ImageJ script -> input into HyDE using GUI -> automated measurements
+Images acquired as "stacks" from camera -> preprocessing manually or using ImageJ script -> input into HyDE using GUI -> automated measurements and/or video
 
 
 ## Hardware
-- Camera requires 6-pin Firewire cable. Firewire ports were phased out of most computers around 2010. You can daisy chain to USB-C using a 6-pin to 9-pin cable and a 9-pin to USB-C adapter. Example:
-	- [Pasow FireWire 800 to 400 9 to 6 pin Cable (9pin 6pin) 6FT, IEEE 1394 Firewire 800 9-pin/6-pin Cable 6 Feet(9 pin to 6 pin)](https://www.amazon.com/gp/product/B00X65XHZG/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
-	- [Apple Thunderbolt to FireWire Adapter](https://www.amazon.com/gp/product/B00SQ2CJUS/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&psc=1)
+
+* Windows 10 computer with Firewire port or a USB-C port
+* Allied Vision Camera
+* Camera requires 6-pin Firewire cable. Firewire ports were phased out of most computers around 2010. You can daisy chain to USB-C using a 6-pin to 9-pin cable and a 9-pin to USB-C adapter. Example:
+	- [Pasow FireWire 800 to 400 9 to 6 pin Cable (9pin 6pin) 6FT, IEEE 1394 Firewire 800 9-pin/6-pin Cable 6 Feet(9 pin to 6 pin)](https://www.amazon.com/gp/product/B00X65XHZG/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1). 9-pin is backwards compatible with 6-pin.
+	- [Apple Thunderbolt to FireWire Adapter](https://www.amazon.com/gp/product/B00SQ2CJUS/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&psc=1). Thunderbolt is basically USB-C. Adapters usually don't exist from Firewire to normal USB because the data transfer rate is insufficient. 
+* TODO: products given by paper
+* TODO: Transformer
+* TODO: Spec for plate holder???  / carousel + carousel motor
+* TODO: rail
 
 ## Hardware installation steps
 
 ## Software
 
+* Camera control software: Install SmartView by Allied Vision
+* Matlab 2021a (7.14)
+* Matlab Compiler Runtime version 7.14
+* The latest release from this repo
+
 ## Software installation steps
 
-1. Camera control software: Install SmartView by Allied Vision
+1. Install [Matlab 2012a](https://www.mathworks.com/downloads/web_downloads/download_release?release=R2012a). You'll need a license/Matlab account to be able to do this. Download the Windows 32-bit version (even if you're on 64-bit, which you likely are if you're using Windows 10). A bunch of packages might be prechecked; uncheck all and just check Matlab 7.14, then download the files they tell you to.
+	* During installation, answer No to the prompt to check for updates.
+	* MATLAB (7.14), Simulink (7.9), MATLAB Builder JA (2.2.4), MATLAB Coder (2.2) MATLAB Compiler (4.17), MATLAB Report Generator (3.12)
+
+
+* MATLAB (7.14), MATLAB Compiler (4.16)
+1. Install some [modern version of Matlab](https://www.mathworks.com/help/install/ug/install-products-with-internet-connection.html). You'll need a license to use Matlab. If you already have Matlab on your computer, that works too. 
+1. Type `mcrinstaller` in the command window. It'll possibly error and suggest you install Matlab Compiler. 
 
 ## Blog (For Chory Lab use)
 
@@ -69,6 +88,9 @@ Was able to find the rail stage + carousel + small backlight, the Marlin camera,
 
 - [Pasow FireWire 800 to 400 9 to 6 pin Cable (9pin 6pin) 6FT, IEEE 1394 Firewire 800 9-pin/6-pin Cable 6 Feet(9 pin to 6 pin)](https://www.amazon.com/gp/product/B00X65XHZG/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 - [Apple Thunderbolt to FireWire Adapter](https://www.amazon.com/gp/product/B00SQ2CJUS/ref=ppx_yo_dt_b_asin_title_o01_s01?ie=UTF8&psc=1)
+https://www.pro-tools-expert.com/production-expert-1/2019/2/12/is-it-possible-to-get-firewire-400-devices-to-work-with-thunderbolt-3-usb-c-and-breathe-life-back-into-our-old-audio-interfaces
+https://www.youtube.com/watch?v=GASIuX1mqwE
+
 
 ### January 2021
 Cactus server (dead and whose hard drives were in RAID setup so order needs to be reconstructed to access) used to host official source and distribution for HyDE, so some files or documentation may be there.
