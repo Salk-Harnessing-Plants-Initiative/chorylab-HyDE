@@ -36,20 +36,20 @@ I cleaned up some of the preexisting example image datasets for your ease of use
 ## [2011 Release](https://github.com/Salk-Harnessing-Plants-Initiative/chorylab-HyDE/releases/tag/v1.0.0)
 Dump of all available files from 2011
 
-	* `2011_HyDEv1_0_win32.zip`: Contains distrib of HyDE v1.0, which is the most stable version of HyDE and the published version used in the paper. Needs MCR 7.14.
-	* `2011_Col-0_ctrl.zip`: Example image data set ready for input into HyDE. Arabidopsis Col-0 grown as control. Contains .avi videos as well.
-	* `2011_Col-0_shade.zip`: Example image data set ready for input into HyDe. Arabidopsis Col-0 grown in shade.
-	* `2011_Col-0_shade_avi.zip`: Companion to `2011_Col-0_shade.zip`; the .avi videos are kept here.
-	* `2011_jekell_files.zip`: Contains
-		* `jekell_preprocess.java`: source for FIJI Plugin to preprocess camera images before input to HyDE
-		* `Interop.Galil.0.5.dll`: useful for interfacing with the carousel
-		* `jekell_3.exe`: a binary used to run the carousel (the source no longer exists). Both `jekell_3.exe` and the carousel are a prototype.
-		* `jekell_preprocess.class`: a binary used in for preprocessing
-	* `2011_HyDE_versions.zip`: Contains 
-		* Source of HyDE v1.0 
-		* A binary for the work-in-progress HyDE v2.0 
-		* The source for the work-in-progress HyDE v4.0. 
-		* There is no HyDE v3.0. HyDE v2.0 and 4.0 amorphously have some work to incorporate leaf angle and different methods to compute Shoot Apical Meristem (SAM), per Benjamin's memory. Consider this zip bundle only for exploratory purposes.
+* `2011_HyDEv1_0_win32.zip`: Contains distrib of HyDE v1.0, which is the most stable version of HyDE and the published version used in the paper. Needs MCR 7.14.
+* `2011_Col-0_ctrl.zip`: Example image data set ready for input into HyDE. Arabidopsis Col-0 grown as control. Contains .avi videos as well.
+* `2011_Col-0_shade.zip`: Example image data set ready for input into HyDe. Arabidopsis Col-0 grown in shade.
+* `2011_Col-0_shade_avi.zip`: Companion to `2011_Col-0_shade.zip`; the .avi videos are kept here.
+* `2011_jekell_files.zip`: Contains
+	* `jekell_preprocess.java`: source for FIJI Plugin to preprocess camera images before input to HyDE
+	* `Interop.Galil.0.5.dll`: useful for interfacing with the carousel
+	* `jekell_3.exe`: a binary used to run the carousel (the source no longer exists). Both `jekell_3.exe` and the carousel are a prototype.
+	* `jekell_preprocess.class`: a binary used in for preprocessing
+* `2011_HyDE_versions.zip`: Contains 
+	* Source of HyDE v1.0 
+	* A binary for the work-in-progress HyDE v2.0 
+	* The source for the work-in-progress HyDE v4.0. 
+	* There is no HyDE v3.0. HyDE v2.0 and 4.0 amorphously have some work to incorporate leaf angle and different methods to compute Shoot Apical Meristem (SAM), per Benjamin's memory. Consider this zip bundle only for exploratory purposes.
 
 
 # Development
