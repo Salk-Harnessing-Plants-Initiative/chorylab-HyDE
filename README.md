@@ -57,10 +57,11 @@ The source included in this repo is based on the 2011 published HyDE v1.0, and t
 
 We only had the 2011 source for v1.0 and v4.0. If you want to see what Benjamin changed, you can view the diff of [commit 458e699](https://github.com/Salk-Harnessing-Plants-Initiative/chorylab-HyDE/commit/458e699259ccee7ba7d7a892298637f221d05c95) from the archival branch `2011-hyde-v4`. 
 
+If you are trying to develop on HyDE, it is forgotten which Matlab libraries were used, but the dependencies should make themselves apparent. Matlab version is 2010b.
+
 
 # Russell's guide
 The pipeline is as follows: Images acquired as "stacks" from camera -> preprocessing manually or using ImageJ script -> input into HyDE using GUI -> automated measurements and/or video
-
 
 ## Hardware
 
