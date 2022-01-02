@@ -96,7 +96,7 @@ Was able to find the rail stage + carousel + small backlight, the Marlin camera,
 
 Attempting daisy chain per suggestion from https://www.pro-tools-expert.com/production-expert-1/2019/2/12/is-it-possible-to-get-firewire-400-devices-to-work-with-thunderbolt-3-usb-c-and-breathe-life-back-into-our-old-audio-interfaces and https://www.youtube.com/watch?v=GASIuX1mqwE.
 
-Update as of April 2021: Doesn't work.
+Update as of April 2021: First attempt didn't work and likely a dead end. May require a particular old software from the vendor and an OS downgrade (ask Russell for the email thread)
 
 ### January 2021
 Cactus server (dead and whose hard drives were in RAID setup so order needs to be reconstructed to access) used to host official source and distribution for HyDE, but Benjamin says files and documentation we currently have are the same.
